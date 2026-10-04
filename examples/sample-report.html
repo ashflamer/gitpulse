@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>gitpulse — demo-clone</title>
+<style>
+  :root {
+    --bg:#0d1117; --panel:#161b22; --line:#30363d; --text:#e6edf3; --dim:#8b949e;
+    --accent:#58a6ff; --crit:#f85149; --warn:#d29922; --ok:#58a6ff; --good:#3fb950;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:2.5rem 1.5rem; background:var(--bg); color:var(--text);
+    font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:960px; margin:0 auto; }
+  h1 { font-size:1.6rem; margin:0 0 .2rem; }
+  h2 { font-size:1rem; text-transform:uppercase; letter-spacing:.08em; color:var(--dim);
+    margin:2.5rem 0 .8rem; font-weight:600; }
+  .sub { color:var(--dim); font-size:.9rem; margin-bottom:2rem; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:1.1rem; }
+  .card .k { color:var(--dim); font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; }
+  .card .v { font-size:1.9rem; font-weight:700; margin-top:.35rem; line-height:1; }
+  .crit .v { color:var(--crit); } .warn .v { color:var(--warn); }
+  .ok .v { color:var(--ok); } .good .v { color:var(--good); }
+  .card .n { color:var(--dim); font-size:.75rem; margin-top:.4rem; }
+  .chart { display:flex; align-items:flex-end; gap:3px; height:120px;
+    background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:.9rem; }
+  .mb { flex:1; background:linear-gradient(180deg,var(--accent),#1f6feb); border-radius:2px 2px 0 0;
+    min-height:4px; transition:opacity .15s; }
+  .mb:hover { opacity:.65; }
+  .axis { display:flex; justify-content:space-between; color:var(--dim);
+    font-size:.72rem; margin-top:.4rem; }
+  table { width:100%; border-collapse:collapse; background:var(--panel);
+    border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:.88rem; }
+  th { text-align:left; color:var(--dim); font-weight:600; font-size:.72rem;
+    text-transform:uppercase; letter-spacing:.06em; padding:.65rem .9rem;
+    border-bottom:1px solid var(--line); }
+  td { padding:.55rem .9rem; border-bottom:1px solid rgba(48,54,61,.5); }
+  tr:last-child td { border-bottom:none; }
+  .num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.82rem;
+    word-break:break-all; }
+  .barcell { width:34%; }
+  .bar { height:8px; background:var(--accent); border-radius:4px; min-width:2px; }
+  .bar.heat { background:linear-gradient(90deg,var(--warn),var(--crit)); }
+  .empty { color:var(--dim); text-align:center; padding:1.2rem; }
+  footer { color:var(--dim); font-size:.78rem; margin-top:3rem;
+    border-top:1px solid var(--line); padding-top:1rem; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body><div class="wrap">
+  <h1>demo-clone</h1>
+  <div class="sub">branch <strong>main</strong> · 22 May 2024 → 23 Sep 2026</div>
+
+  <div class="cards">
+    <div class="card warn"><div class="k">Bus factor</div><div class="v">2</div>
+      <div class="n">AT RISK</div></div>
+    <div class="card"><div class="k">Commits</div><div class="v">873</div>
+      <div class="n">7.16/week</div></div>
+    <div class="card"><div class="k">Authors</div><div class="v">98</div>
+      <div class="n">4 solo-owned files</div></div>
+    <div class="card"><div class="k">Age</div><div class="v">2.3y</div>
+      <div class="n">853 days</div></div>
+  </div>
+
+  <h2>Commit activity</h2>
+  <div class="chart"><div class="mb" style="height:9%" title="2024-10: 12 commits"></div><div class="mb" style="height:26%" title="2024-11: 36 commits"></div><div class="mb" style="height:19%" title="2024-12: 26 commits"></div><div class="mb" style="height:12%" title="2025-01: 16 commits"></div><div class="mb" style="height:4%" title="2025-02: 5 commits"></div><div class="mb" style="height:10%" title="2025-03: 14 commits"></div><div class="mb" style="height:10%" title="2025-04: 13 commits"></div><div class="mb" style="height:54%" title="2025-05: 73 commits"></div><div class="mb" style="height:27%" title="2025-06: 37 commits"></div><div class="mb" style="height:24%" title="2025-07: 33 commits"></div><div class="mb" style="height:61%" title="2025-08: 83 commits"></div><div class="mb" style="height:42%" title="2025-09: 57 commits"></div><div class="mb" style="height:28%" title="2025-10: 38 commits"></div><div class="mb" style="height:17%" title="2025-11: 23 commits"></div><div class="mb" style="height:7%" title="2025-12: 10 commits"></div><div class="mb" style="height:4%" title="2026-01: 1 commits"></div><div class="mb" style="height:10%" title="2026-02: 13 commits"></div><div class="mb" style="height:21%" title="2026-03: 28 commits"></div><div class="mb" style="height:58%" title="2026-04: 79 commits"></div><div class="mb" style="height:100%" title="2026-05: 136 commits"></div><div class="mb" style="height:19%" title="2026-06: 26 commits"></div><div class="mb" style="height:36%" title="2026-07: 49 commits"></div><div class="mb" style="height:28%" title="2026-08: 38 commits"></div><div class="mb" style="height:19%" title="2026-09: 26 commits"></div></div>
+  <div class="axis"><span>2024-10</span><span>2026-09</span></div>
+
+  <h2>Contributors</h2>
+  <table><thead><tr><th>Author</th><th></th><th class="num">Commits</th>
+    <th class="num">Lines changed</th></tr></thead><tbody><tr><td>Rowlando13</td><td class="barcell"><div class="bar" style="width:100.0%"></div></td><td class="num">224</td><td class="num">1,170</td></tr><tr><td>Kevin Deldycke</td><td class="barcell"><div class="bar" style="width:81.7%"></div></td><td class="num">183</td><td class="num">19,339</td></tr><tr><td>Edward G</td><td class="barcell"><div class="bar" style="width:31.2%"></div></td><td class="num">70</td><td class="num">11,640</td></tr><tr><td>David Lord</td><td class="barcell"><div class="bar" style="width:29.5%"></div></td><td class="num">66</td><td class="num">4,917</td></tr><tr><td>denuoweb</td><td class="barcell"><div class="bar" style="width:18.3%"></div></td><td class="num">41</td><td class="num">2,890</td></tr><tr><td>Andreas Backx</td><td class="barcell"><div class="bar" style="width:8.0%"></div></td><td class="num">18</td><td class="num">1,474</td></tr><tr><td>Edward Girling</td><td class="barcell"><div class="bar" style="width:6.2%"></div></td><td class="num">14</td><td class="num">1,410</td></tr><tr><td>Jaron Rosenau</td><td class="barcell"><div class="bar" style="width:5.4%"></div></td><td class="num">12</td><td class="num">593</td></tr><tr><td>jorenham</td><td class="barcell"><div class="bar" style="width:4.5%"></div></td><td class="num">10</td><td class="num">640</td></tr><tr><td>unknown</td><td class="barcell"><div class="bar" style="width:4.0%"></div></td><td class="num">9</td><td class="num">291</td></tr><tr><td>pre-commit-ci-lite[bot]</td><td class="barcell"><div class="bar" style="width:3.6%"></div></td><td class="num">8</td><td class="num">17</td></tr><tr><td>Veritia</td><td class="barcell"><div class="bar" style="width:3.6%"></div></td><td class="num">8</td><td class="num">1,292</td></tr></tbody></table>
+
+  <h2>Hotspots <span style="text-transform:none;font-weight:400">— high churn, recently touched</span></h2>
+  <table><thead><tr><th>File</th><th>Risk</th><th class="num">Commits</th>
+    <th class="num">Churn</th><th class="num">Authors</th><th class="num">Last</th></tr></thead>
+    <tbody><tr><td class="mono">CHANGES.md</td><td class="barcell"><div class="bar heat" style="width:100.0%"></div></td><td class="num">42</td><td class="num">3,291</td><td class="num">6</td><td class="num">12d</td></tr><tr><td class="mono">tests/test_options.py</td><td class="barcell"><div class="bar heat" style="width:93.3%"></div></td><td class="num">51</td><td class="num">4,672</td><td class="num">15</td><td class="num">23d</td></tr><tr><td class="mono">src/click/core.py</td><td class="barcell"><div class="bar heat" style="width:64.5%"></div></td><td class="num">102</td><td class="num">3,264</td><td class="num">27</td><td class="num">23d</td></tr><tr><td class="mono">tests/test_arguments.py</td><td class="barcell"><div class="bar heat" style="width:62.7%"></div></td><td class="num">19</td><td class="num">1,740</td><td class="num">7</td><td class="num">23d</td></tr><tr><td class="mono">tests/test_termui.py</td><td class="barcell"><div class="bar heat" style="width:37.5%"></div></td><td class="num">32</td><td class="num">1,941</td><td class="num">11</td><td class="num">46d</td></tr><tr><td class="mono">uv.lock</td><td class="barcell"><div class="bar heat" style="width:22.2%"></div></td><td class="num">28</td><td class="num">3,673</td><td class="num">6</td><td class="num">12d</td></tr><tr><td class="mono">src/click/_termui_impl.py</td><td class="barcell"><div class="bar heat" style="width:17.5%"></div></td><td class="num">34</td><td class="num">1,181</td><td class="num">17</td><td class="num">46d</td></tr><tr><td class="mono">tests/test_deprecations.py</td><td class="barcell"><div class="bar heat" style="width:13.2%"></div></td><td class="num">6</td><td class="num">443</td><td class="num">2</td><td class="num">23d</td></tr><tr><td class="mono">src/click/types.py</td><td class="barcell"><div class="bar heat" style="width:12.4%"></div></td><td class="num">24</td><td class="num">1,028</td><td class="num">11</td><td class="num">26d</td></tr><tr><td class="mono">tests/test_basic.py</td><td class="barcell"><div class="bar heat" style="width:12.1%"></div></td><td class="num">17</td><td class="num">711</td><td class="num">4</td><td class="num">29d</td></tr><tr><td class="mono">tests/test_testing.py</td><td class="barcell"><div class="bar heat" style="width:9.6%"></div></td><td class="num">16</td><td class="num">712</td><td class="num">9</td><td class="num">79d</td></tr><tr><td class="mono">src/click/termui.py</td><td class="barcell"><div class="bar heat" style="width:9.2%"></div></td><td class="num">29</td><td class="num">582</td><td class="num">13</td><td class="num">46d</td></tr><tr><td class="mono">docs/options.md</td><td class="barcell"><div class="bar heat" style="width:6.1%"></div></td><td class="num">19</td><td class="num">785</td><td class="num">5</td><td class="num">136d</td></tr><tr><td class="mono">docs/faqs.md</td><td class="barcell"><div class="bar heat" style="width:5.7%"></div></td><td class="num">6</td><td class="num">251</td><td class="num">2</td><td class="num">33d</td></tr><tr><td class="mono">src/click/testing.py</td><td class="barcell"><div class="bar heat" style="width:5.6%"></div></td><td class="num">20</td><td class="num">663</td><td class="num">12</td><td class="num">79d</td></tr></tbody></table>
+
+  <h2>Knowledge silos</h2>
+  <table><thead><tr><th>File</th><th>Sole author</th></tr></thead><tbody><tr><td class="mono">.github/workflows/nightly.yaml</td><td>Kevin Deldycke</td></tr><tr><td class="mono">docs/_static/click-icon.svg</td><td>David Lord</td></tr><tr><td class="mono">docs/contributing.md</td><td>Kevin Deldycke</td></tr><tr><td class="mono">README.md</td><td>David Lord</td></tr></tbody></table>
+
+  <footer>Generated by <a href="https://github.com/ashflamer/gitpulse">gitpulse</a>
+    on 04 Oct 2026 15:17 UTC. Hotspot score = time-decayed churn ×
+    log(commits) × single-author penalty.</footer>
+</div></body></html>
