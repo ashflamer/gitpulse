@@ -26,7 +26,7 @@ def test_bus_factor_of_empty_history_is_zero():
 def test_merge_commits_are_excluded_from_bus_factor():
     merge = make("Bot", 1700000000, ("x.py", 999, 0))
     merge.subject = "Merge pull request #1"
-    assert bus_factor([merge] + [make("Alice", 1700000000, ("a.py", 10, 0))]) == 1
+    assert bus_factor([merge, make("Alice", 1700000000, ("a.py", 10, 0))]) == 1
 
 
 def test_recent_churn_outranks_old_churn():

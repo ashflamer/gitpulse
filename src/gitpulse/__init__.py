@@ -13,7 +13,14 @@ from gitpulse.metrics import (
 )
 
 __all__ = [
-    "Commit", "FileChange", "read_history",
-    "Analysis", "FileRisk", "analyse", "bus_factor", "hotspots", "knowledge_silos",
+    "Analysis",
+    "Commit",
+    "FileChange",
+    "FileRisk",
     "__version__",
+    "analyse",
+    "bus_factor",
+    "hotspots",
+    "knowledge_silos",
+    "read_history",
 ]

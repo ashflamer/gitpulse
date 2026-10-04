@@ -1,8 +1,14 @@
 import pytest
 
 from gitpulse.history import (
-    FIELD_SEP, RECORD_SEP, NotARepository, _resolve_rename,
-    current_branch, parse_log, read_history, tracked_files,
+    FIELD_SEP,
+    RECORD_SEP,
+    NotARepository,
+    _resolve_rename,
+    current_branch,
+    parse_log,
+    read_history,
+    tracked_files,
 )
 
 
